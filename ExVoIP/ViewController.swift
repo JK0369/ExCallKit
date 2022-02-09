@@ -9,11 +9,18 @@ import UIKit
 import CallKit
 
 class ViewController: UIViewController {
+  let provider = CXProvider(configuration: CXProviderConfiguration())
   private let callController = CXCallController()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.backgroundColor = .white
+    
+    // 발신자 표시, 수신 차단 기능 활성화
+    CXCallDirectoryManager.sharedInstance
+      .reloadExtension(withIdentifier: "com.ExVoIP.CallDirectory") { error in
+        print(error ?? "")
+      }
   }
   
   @IBAction func didTapButton(_ sender: Any) {
@@ -26,7 +33,6 @@ class ViewController: UIViewController {
   
   // 전화 받기
   private func receiving() {
-    let provider = CXProvider(configuration: CXProviderConfiguration())
     provider.setDelegate(self, queue: nil)
     
     // TODO: UUID값과 update값은 PushKit에서 넘어온(pushRegistry 메소드) 정보를 이용하여 사용

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C67A56FB27B38D520062A29B /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67A56FA27B38D520062A29B /* CallDirectoryHandler.swift */; };
+		C67A56FF27B38D520062A29B /* CallDirectory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C67A56F827B38D520062A29B /* CallDirectory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C6BB914A27B12334006B22EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB914927B12334006B22EB /* AppDelegate.swift */; };
 		C6BB914C27B12334006B22EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB914B27B12334006B22EB /* SceneDelegate.swift */; };
 		C6BB914E27B12334006B22EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BB914D27B12334006B22EB /* ViewController.swift */; };
@@ -15,7 +17,34 @@
 		C6BB915627B12336006B22EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BB915427B12336006B22EB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C67A56FD27B38D520062A29B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6BB913E27B12334006B22EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C67A56F727B38D520062A29B;
+			remoteInfo = CallDirectory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C67A570327B38D520062A29B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C67A56FF27B38D520062A29B /* CallDirectory.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C67A56F827B38D520062A29B /* CallDirectory.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CallDirectory.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67A56FA27B38D520062A29B /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		C67A56FC27B38D520062A29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BB914627B12334006B22EB /* ExVoIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExVoIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BB914927B12334006B22EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6BB914B27B12334006B22EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C67A56F527B38D520062A29B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6BB914327B12334006B22EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C67A56F927B38D520062A29B /* CallDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				C67A56FA27B38D520062A29B /* CallDirectoryHandler.swift */,
+				C67A56FC27B38D520062A29B /* Info.plist */,
+			);
+			path = CallDirectory;
+			sourceTree = "<group>";
+		};
 		C6BB913D27B12334006B22EB = {
 			isa = PBXGroup;
 			children = (
 				C6BB914827B12334006B22EB /* ExVoIP */,
+				C67A56F927B38D520062A29B /* CallDirectory */,
 				C6BB914727B12334006B22EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C6BB914627B12334006B22EB /* ExVoIP.app */,
+				C67A56F827B38D520062A29B /* CallDirectory.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +117,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C67A56F727B38D520062A29B /* CallDirectory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C67A570027B38D520062A29B /* Build configuration list for PBXNativeTarget "CallDirectory" */;
+			buildPhases = (
+				C67A56F427B38D520062A29B /* Sources */,
+				C67A56F527B38D520062A29B /* Frameworks */,
+				C67A56F627B38D520062A29B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallDirectory;
+			productName = CallDirectory;
+			productReference = C67A56F827B38D520062A29B /* CallDirectory.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C6BB914527B12334006B22EB /* ExVoIP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6BB915A27B12336006B22EB /* Build configuration list for PBXNativeTarget "ExVoIP" */;
@@ -77,10 +141,12 @@
 				C6BB914227B12334006B22EB /* Sources */,
 				C6BB914327B12334006B22EB /* Frameworks */,
 				C6BB914427B12334006B22EB /* Resources */,
+				C67A570327B38D520062A29B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C67A56FE27B38D520062A29B /* PBXTargetDependency */,
 			);
 			name = ExVoIP;
 			productName = ExVoIP;
@@ -97,6 +163,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					C67A56F727B38D520062A29B = {
+						CreatedOnToolsVersion = 13.2;
+					};
 					C6BB914527B12334006B22EB = {
 						CreatedOnToolsVersion = 13.2;
 					};
@@ -116,11 +185,19 @@
 			projectRoot = "";
 			targets = (
 				C6BB914527B12334006B22EB /* ExVoIP */,
+				C67A56F727B38D520062A29B /* CallDirectory */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C67A56F627B38D520062A29B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6BB914427B12334006B22EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +211,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C67A56F427B38D520062A29B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C67A56FB27B38D520062A29B /* CallDirectoryHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6BB914227B12334006B22EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +230,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C67A56FE27B38D520062A29B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C67A56F727B38D520062A29B /* CallDirectory */;
+			targetProxy = C67A56FD27B38D520062A29B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6BB914F27B12334006B22EB /* Main.storyboard */ = {
@@ -166,6 +259,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C67A570127B38D520062A29B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V99UMBT63A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CallDirectory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CallDirectory;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExVoIP.CallDirectory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C67A570227B38D520062A29B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V99UMBT63A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CallDirectory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CallDirectory;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ExVoIP.CallDirectory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C6BB915827B12336006B22EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,6 +432,7 @@
 		C6BB915B27B12336006B22EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +462,7 @@
 		C6BB915C27B12336006B22EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +492,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C67A570027B38D520062A29B /* Build configuration list for PBXNativeTarget "CallDirectory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C67A570127B38D520062A29B /* Debug */,
+				C67A570227B38D520062A29B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6BB914127B12334006B22EB /* Build configuration list for PBXProject "ExVoIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
